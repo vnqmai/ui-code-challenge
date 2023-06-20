@@ -1,0 +1,11 @@
+html { 
+  font-size: $default-rem;
+}
+
+body {
+  margin: 0;
+  font-size: $size-default;
+  line-height: calc(23.4px / $size-default);
+  background: $body-bg;
+  color: $body-txt;
+}

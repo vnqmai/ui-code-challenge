@@ -1,0 +1,147 @@
+@import './assets/styles/variables/all.scss';
+
+.App {
+  .godfather-sidebar {
+    position: fixed;
+    left: calc(var(--bs-gutter-x) * 0.5);
+    width: 28rem;
+    min-height: 100vh;
+    background-color: $black-3;
+
+    &-logo {
+      margin: 6rem auto;
+      width: 13rem;
+      img {
+        width: 100%;
+      }
+    }
+
+    &-employee-item {
+      text-align: center;
+      padding: 0.5rem;
+      cursor: pointer;
+      &.active {
+        color: $blue-1;
+        background-color: $gray-2;
+      }
+      &.interact {
+        color: $blue-1;
+      }
+    }
+  }
+
+  .godfather-header {
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 22rem;
+
+    background-image: url('./assets/_images/Header\ image/Godfather header.jpg');
+    background-repeat: no-repeat;
+    background-position: 0rem 30%;
+    background-size: cover;
+  }
+
+  .godfather-content {
+    &-wrapper {
+      background-color: $gray-1;
+    }
+
+    &-block {
+      padding-left: 28rem;
+    }
+
+    display: flex;
+    align-items: flex-start;
+    margin-top: -4rem;
+    padding: 0 6.7rem;
+    &-image {
+      margin-right: 3.7rem;
+      margin-bottom: 2rem;
+      img {
+        width: 11rem;
+        height: 11rem;
+        border: 0.05rem solid $white;
+        border-radius: $rounded-1;
+      }
+    }
+
+    &-name {
+      margin-bottom: 2.3rem;
+      font-size: 4rem;
+      line-height: 4rem;
+    }
+
+    &-title {
+      font-size: 2rem;
+      height: 2.6rem;
+      line-height: 2.6rem;
+    }
+
+    &-popularity {
+      margin-bottom: 2.5rem;
+      display: flex;
+      align-items: center;
+
+      .form-range {
+        margin-left: 2.5rem;
+        height: 2.6rem;
+        line-height: 2.6rem;
+      }
+    }
+
+    &-biography {
+      padding: 2rem;
+      background-color: $black-2;
+      border-radius: $rounded-1;
+
+      .godfather-content-title {
+        margin-bottom: 0.8rem;
+      }
+    }
+  }
+
+  .input-range {
+    flex: 1;
+    height: 26px;
+  }
+  @media screen and (max-width: $BREAKPOINT-XL) {
+    .sidebar-toggle {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: $BREAKPOINT-XXL) {
+    .sidebar-toggle {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: $BREAKPOINT-LG) {
+    .sidebar-toggle {
+      display: none;
+    }
+    .godfather-content {
+      flex-wrap: wrap;
+      padding: 1rem;
+    }
+  }
+
+  @media screen and (max-width: $BREAKPOINT-SM) {
+    .sidebar-toggle {
+      display: block;
+    }
+
+    .godfather-sidebar {
+      left: -28rem;
+      background-color: $black-2;
+
+      &.mobile-show {
+        left: 0;
+      }
+    }
+    .godfather-content-block {
+      padding-left: 2rem;
+    }
+  }
+}
